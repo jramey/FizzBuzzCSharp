@@ -17,7 +17,6 @@ namespace Calculate
                 return "Fizz";
 
             return i.ToString();
-
         }
     }
 }
