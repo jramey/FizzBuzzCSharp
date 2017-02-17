@@ -1,0 +1,9 @@
+language: csharp
+script:
+  - xbuild /p:Configuration=Debug FizzBuzz/FizzBuzz.sln
+before_install:
+  - sudo apt-get install nunit-console
+before_script:
+  - nuget restore FizzBuzz/FizzBuzz.sln
+after_script:
+  - nunit-console FizzBuzz/TestProject1/bin/debug/TestProject1.dll
